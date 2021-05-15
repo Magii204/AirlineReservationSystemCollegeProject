@@ -33,7 +33,6 @@ namespace AirlineReservationSystemCollegeProject
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -42,6 +41,7 @@ namespace AirlineReservationSystemCollegeProject
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,10 +62,10 @@ namespace AirlineReservationSystemCollegeProject
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.comboBox3);
@@ -88,17 +88,6 @@ namespace AirlineReservationSystemCollegeProject
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 14;
             this.pictureBox3.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(800, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 37);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker2
             // 
@@ -215,6 +204,18 @@ namespace AirlineReservationSystemCollegeProject
             this.label5.TabIndex = 0;
             this.label5.Text = "Insurance";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(785, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 40);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Insurance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,6 +250,6 @@ namespace AirlineReservationSystemCollegeProject
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

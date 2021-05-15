@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,11 +19,13 @@ namespace AirlineReservationSystemCollegeProject
         {
             InitializeComponent();
         }
-
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\NewAirlineReservationSystemProject\AirlineReservationSystemCollegeProject\AirlineReservationSystemCollegeProject\Login_Database.mdf;Integrated Security=True");
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel2.BackColor = Color.FromArgb(100, 0, 0, 0);
-            
+            // TODO: This line of code loads data into the 'login_DatabaseDataSet1.TblFlight' table. You can move, or remove it, as needed.
+            this.tblFlightTableAdapter.Fill(this.login_DatabaseDataSet1.TblFlight);
+            // panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,19 +64,6 @@ namespace AirlineReservationSystemCollegeProject
             Transfers T = new Transfers();
             T.Show();
         }
-        private void label4_Click(object sender, EventArgs e)
-        {
-            foreach (Control c in panel1.Controls)
-            {
-                c.ForeColor = Color.Black;
-            }
-            //set the clicked control to a different color
-            Control o = (Control)sender;
-            o.ForeColor = Color.Orange;
-            //Redirect to the Activities.cs page
-            Activities A = new Activities();
-            A.Show();
-        }
         private void label5_Click(object sender, EventArgs e)
         {
             foreach (Control c in panel1.Controls)
@@ -101,7 +92,7 @@ namespace AirlineReservationSystemCollegeProject
         }
         private void label9_Click(object sender, EventArgs e)
         {
-            foreach (Control c in label9.Controls)
+            foreach (Control c in label1.Controls)
             {
                 c.ForeColor = Color.White;
             }
@@ -111,7 +102,7 @@ namespace AirlineReservationSystemCollegeProject
         }
         private void label10_Click(object sender, EventArgs e)
         {
-            foreach (Control c in label10.Controls)
+            foreach (Control c in label16.Controls)
             {
                 c.ForeColor = Color.White;
             }
@@ -121,7 +112,7 @@ namespace AirlineReservationSystemCollegeProject
         }
         private void label11_Click(object sender, EventArgs e)
         {
-            foreach (Control c in label11.Controls)
+            foreach (Control c in label16.Controls)
             {
                 c.ForeColor = Color.White;
             }
@@ -132,8 +123,7 @@ namespace AirlineReservationSystemCollegeProject
         private void button1_Click(object sender, EventArgs e)
         {
             //Redirect to the login.cs page
-            login L = new login();
-            L.Show();
+            
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -144,6 +134,7 @@ namespace AirlineReservationSystemCollegeProject
         {
             
 
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -153,10 +144,61 @@ namespace AirlineReservationSystemCollegeProject
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label10_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker7_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tabcontrol1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

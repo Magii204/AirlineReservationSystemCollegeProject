@@ -44,7 +44,14 @@ namespace AirlineReservationSystemCollegeProject
 
         private void Hotels_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'login_DatabaseDataSet2.TblHotel' table. You can move, or remove it, as needed.
+            this.tblHotelTableAdapter.Fill(this.login_DatabaseDataSet2.TblHotel);
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@ namespace AirlineReservationSystemCollegeProject
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hotels));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,14 +44,28 @@ namespace AirlineReservationSystemCollegeProject
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.login_DatabaseDataSet2 = new AirlineReservationSystemCollegeProject.Login_DatabaseDataSet2();
+            this.tblHotelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblHotelTableAdapter = new AirlineReservationSystemCollegeProject.Login_DatabaseDataSet2TableAdapters.TblHotelTableAdapter();
+            this.hotelIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hotelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noRoomsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login_DatabaseDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHotelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -62,10 +77,11 @@ namespace AirlineReservationSystemCollegeProject
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(138, 295);
+            this.panel1.Location = new System.Drawing.Point(136, 231);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1061, 166);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label4
             // 
@@ -121,7 +137,7 @@ namespace AirlineReservationSystemCollegeProject
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.BackColor = System.Drawing.Color.SaddleBrown;
             this.button2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(705, 114);
@@ -204,6 +220,7 @@ namespace AirlineReservationSystemCollegeProject
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.ForeColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(12, 12);
@@ -222,12 +239,98 @@ namespace AirlineReservationSystemCollegeProject
             this.label5.TabIndex = 0;
             this.label5.Text = "Hotels";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hotelIdDataGridViewTextBoxColumn,
+            this.hotelNameDataGridViewTextBoxColumn,
+            this.locationDataGridViewTextBoxColumn,
+            this.noRoomsDataGridViewTextBoxColumn,
+            this.rateDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tblHotelBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(245, 439);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(541, 258);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // login_DatabaseDataSet2
+            // 
+            this.login_DatabaseDataSet2.DataSetName = "Login_DatabaseDataSet2";
+            this.login_DatabaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblHotelBindingSource
+            // 
+            this.tblHotelBindingSource.DataMember = "TblHotel";
+            this.tblHotelBindingSource.DataSource = this.login_DatabaseDataSet2;
+            // 
+            // tblHotelTableAdapter
+            // 
+            this.tblHotelTableAdapter.ClearBeforeFill = true;
+            // 
+            // hotelIdDataGridViewTextBoxColumn
+            // 
+            this.hotelIdDataGridViewTextBoxColumn.DataPropertyName = "Hotel_Id";
+            this.hotelIdDataGridViewTextBoxColumn.HeaderText = "Hotel_Id";
+            this.hotelIdDataGridViewTextBoxColumn.Name = "hotelIdDataGridViewTextBoxColumn";
+            // 
+            // hotelNameDataGridViewTextBoxColumn
+            // 
+            this.hotelNameDataGridViewTextBoxColumn.DataPropertyName = "Hotel_Name";
+            this.hotelNameDataGridViewTextBoxColumn.HeaderText = "Hotel_Name";
+            this.hotelNameDataGridViewTextBoxColumn.Name = "hotelNameDataGridViewTextBoxColumn";
+            // 
+            // locationDataGridViewTextBoxColumn
+            // 
+            this.locationDataGridViewTextBoxColumn.DataPropertyName = "Location";
+            this.locationDataGridViewTextBoxColumn.HeaderText = "Location";
+            this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            // 
+            // noRoomsDataGridViewTextBoxColumn
+            // 
+            this.noRoomsDataGridViewTextBoxColumn.DataPropertyName = "NoRooms";
+            this.noRoomsDataGridViewTextBoxColumn.HeaderText = "NoRooms";
+            this.noRoomsDataGridViewTextBoxColumn.Name = "noRoomsDataGridViewTextBoxColumn";
+            // 
+            // rateDataGridViewTextBoxColumn
+            // 
+            this.rateDataGridViewTextBoxColumn.DataPropertyName = "Rate";
+            this.rateDataGridViewTextBoxColumn.HeaderText = "Rate";
+            this.rateDataGridViewTextBoxColumn.Name = "rateDataGridViewTextBoxColumn";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1226, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 37);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Logout";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(831, 660);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 37);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Book Now";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Hotels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1370, 497);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -240,6 +343,9 @@ namespace AirlineReservationSystemCollegeProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.login_DatabaseDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblHotelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +365,16 @@ namespace AirlineReservationSystemCollegeProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Login_DatabaseDataSet2 login_DatabaseDataSet2;
+        private System.Windows.Forms.BindingSource tblHotelBindingSource;
+        private Login_DatabaseDataSet2TableAdapters.TblHotelTableAdapter tblHotelTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hotelIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hotelNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noRoomsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
